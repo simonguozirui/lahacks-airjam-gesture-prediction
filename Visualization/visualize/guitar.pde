@@ -1,20 +1,21 @@
-class drum{
-  int x,y,r;
+class guitar{
+  int x,y,w,h;
     
-  drum(int xcoord, int ycoord, int radius){
+  guitar(int xcoord, int ycoord, int rwidth, int rheight){
     x = xcoord;
     y = ycoord;
-    r = radius;
+    w = rwidth;
+    h = rheight;
   }
   
   void spawn(){
     
     fill(255,0,0);
     stroke(0);
-    ellipse(x, y, r, r);
+    rect(x,y,w,h);
     fill(255,255,255);
     stroke(0);
-    ellipse(x, y, r-10, r-10);
+    rect(x,y,w-10,h-10);
     
   }
   
