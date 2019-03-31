@@ -115,7 +115,7 @@ void hitDrum(int num){
 
 
 void hitGuitar(int num){
- 
+  num = 17 - num;
   if (num == 1){
      guitar1.hit();
    }

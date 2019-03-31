@@ -19,7 +19,7 @@ class guitar{
   void hit(){
     w_start = w;
     h_start = h;
-    delay(1000);
+    delay(100);
     w_start = 0;
     h_start = 0;
     
