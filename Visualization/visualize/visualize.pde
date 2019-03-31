@@ -3,7 +3,8 @@ import oscP5.*;
 
 OscP5 oscP5;
 int r = 50;
-String currentInstrument;
+String currentInstrument = "guitar";
+//String currentInstrument = "drum";
 drum drum1, drum2, drum3, drum4;
 guitar guitar1, guitar2, guitar3, guitar4, guitar5, guitar6, guitar7, guitar8, guitar9, guitar10, guitar11, guitar12, guitar13, guitar14, guitar15, guitar16;
 PImage guitarShape, gcp, openpose, lahacks, processing;
@@ -32,14 +33,25 @@ void setup(){
   guitar5 = new guitar(380, 360, 30, 50);
   guitar6 = new guitar(410, 360, 30, 50);
   guitar7 = new guitar(440, 360, 25, 50);
-  
-  
+  guitar8 = new guitar(465, 360, 25, 50);
+  guitar9 = new guitar(490, 360, 20, 50);
+  guitar10 = new guitar(510, 360, 20, 50);
+  guitar11 = new guitar(530, 360, 20, 50);
+  guitar12 = new guitar(550, 360, 20, 50);
+  guitar13 = new guitar(570, 360, 20, 50);
+  guitar14 = new guitar(590, 360, 20, 50);
+  guitar15 = new guitar(610, 360, 20, 50);
+  guitar16 = new guitar(630, 360, 20, 50);
 }
+
 
 void draw(){
   background(0);
-  //drawDrum();
-  drawGuitar();
+  if (currentInstrument.equals("drum")){
+    drawDrum();
+  }else if (currentInstrument.equals("guitar")){
+    drawGuitar();
+  }
 }
 
 void drawDrum(){
@@ -62,23 +74,94 @@ void drawGuitar(){
   guitar5.spawn();
   guitar6.spawn();
   guitar7.spawn();
+  guitar8.spawn();
+  guitar9.spawn();
+  guitar10.spawn();
+  guitar11.spawn();
+  guitar12.spawn();
+  guitar13.spawn();
+  guitar14.spawn();
+  guitar15.spawn();
+  guitar16.spawn();
 }
+
 
 void oscEvent(OscMessage theOscMessage) {
   if(theOscMessage.checkAddrPattern("/hit")==true) {
-     int drumToHit = theOscMessage.get(0).intValue();
-     println(drumToHit);
-     if (drumToHit == 1){
-       drum1.hit();
-     }
-     if (drumToHit == 2){
-       drum2.hit();
-     }
-     if (drumToHit == 3){
-       drum3.hit();
-     }
-     if (drumToHit == 4){
-       drum4.hit();
+     int toHit = theOscMessage.get(0).intValue();
+     println(toHit);
+     if (currentInstrument.equals("drum")){
+       hitDrum(toHit);
+     }else if (currentInstrument.equals("guitar")){
+       hitGuitar(toHit);
      }
   }
+}
+
+void hitDrum(int num){
+  if (num == 1){
+     drum1.hit();
+   }
+   if (num == 2){
+     drum2.hit();
+   }
+   if (num == 3){
+     drum3.hit();
+   }
+   if (num == 4){
+     drum4.hit();
+   }
+}
+
+
+void hitGuitar(int num){
+ 
+  if (num == 1){
+     guitar1.hit();
+   }
+   if (num == 2){
+     guitar2.hit();
+   }
+   if (num == 3){
+     guitar3.hit();
+   }
+   if (num == 4){
+     guitar4.hit();
+   }
+   if (num == 5){
+     guitar5.hit();
+   }
+   if (num == 6){
+     guitar6.hit();
+   }
+   if (num == 7){
+     guitar7.hit();
+   }
+   if (num == 8){
+     guitar8.hit();
+   }
+   if (num == 9){
+     guitar9.hit();
+   }
+   if (num == 10){
+     guitar10.hit();
+   }
+   if (num == 11){
+     guitar11.hit();
+   }
+   if (num == 12){
+     guitar12.hit();
+   }
+   if (num == 13){
+     guitar13.hit();
+   }
+   if (num == 14){
+     guitar14.hit();
+   }
+   if (num == 15){
+     guitar15.hit();
+   }
+   if (num == 16){
+     guitar16.hit();
+   }
 }
