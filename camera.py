@@ -1,5 +1,6 @@
 import cv2
 import sys
+import json
 
 from google.cloud import automl_v1beta1
 from google.cloud.automl_v1beta1.proto import service_pb2
@@ -24,4 +25,5 @@ if __name__ == '__main__':
   with open(file_path, 'rb') as ff:
     content = ff.read()
 
-  print(get_prediction(content, project_id,  model_id))
+  response = get_prediction(content, project_id,  model_id)
+  print(response)
