@@ -1,4 +1,33 @@
 // append letters (A,B..) dynamically into variable 'array'
+//
+//
+//
+//
+// // osc socket connection
+// var socket = io('http://127.0.0.1:8081');
+// console.log('oi');
+// socket.on('connect', function() {
+// 		 // sends to socket.io server the host/port of oscServer
+// 		 // and oscClient
+// 		 socket.emit('config',
+// 				 {
+// 						 server: {
+// 								 port: 3333,
+// 								 host: '127.0.0.1'
+// 						 },
+// 						 client: {
+// 								 port: 3334,
+// 								 host: '127.0.0.1'
+// 						 }
+// 				 }
+// 		 );
+//  });
+//
+//  socket.on('message', function(obj) {
+// 		 var status = document.getElementById("status");
+// 		 status.innerHTML = obj[0];
+// 		 console.log(obj);
+//  });
 
 // crash varibles
 crashCymbolAll = document.getElementById('Crash');
@@ -257,7 +286,7 @@ keytl.to(key, 0.1, {scale: 1.1, transformOrigin: "50% 50%", ease: Expo.easeOut})
 
 
 
-setInterval(function(){ 
+setInterval(function(){
 
 switch (array[0]) {
 		case 'A':
