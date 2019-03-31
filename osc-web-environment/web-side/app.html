@@ -21,37 +21,6 @@
 
   <hr />
 
-  <script src="http://127.0.0.1:8081/socket.io/socket.io.js"></script>
-
-  <script>
-     var socket = io('http://127.0.0.1:8081');
-     // var socket = io();
-     console.log('oi');
-     socket.on('connect', function() {
-          // sends to socket.io server the host/port of oscServer
-          // and oscClient
-          socket.emit('config',
-              {
-                  server: {
-                      port: 3333,
-                      host: '127.0.0.1'
-                  },
-                  client: {
-                      port: 3334,
-                      host: '127.0.0.1'
-                  }
-              }
-          );
-      });
-
-      socket.on('message', function(obj) {
-          var status = document.getElementById("status");
-          status.innerHTML = obj[0];
-          console.log(obj);
-      });
-  </script>
-
-
 
 
   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="300 300 1400 1400">
@@ -824,7 +793,7 @@
 
 <!-- Check out my other pens or hit me up on Twitter -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js'></script>
-
+  <script src="http://127.0.0.1:8081/socket.io/socket.io.js"></script>
   <script  src="js/index.js"></script>
 
 
