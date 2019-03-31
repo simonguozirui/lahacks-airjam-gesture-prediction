@@ -21,7 +21,7 @@ list  = ["A","B","C","D"]
 def drumNotesSimulator():
      while True:
          client.send_message("/hit", random.choice(list))
-         time.sleep(1)
+         time.sleep(random.random())
 #
 # if instrument == "guitar":
 #     client.send_message("/instrument", "guitar")
