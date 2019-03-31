@@ -24,6 +24,16 @@ void setup(){
   drum2 = new drum(400, 240, 180);
   drum3 = new drum(680, 240, 180);
   drum4 = new drum(800, 480, 280);
+  //guitars
+  guitar1 = new guitar(230, 360, 40, 50);
+  guitar2 = new guitar(270, 360, 40, 50);
+  guitar3 = new guitar(310, 360, 35, 50);
+  guitar4 = new guitar(345, 360, 35, 50);
+  guitar5 = new guitar(380, 360, 30, 50);
+  guitar6 = new guitar(410, 360, 30, 50);
+  guitar7 = new guitar(440, 360, 25, 50);
+  
+  
 }
 
 void draw(){
@@ -45,7 +55,13 @@ void drawDrum(){
 
 void drawGuitar(){
   image(guitarShape, 50, 200);
-  rect(0,0,0,0);
+  guitar1.spawn();
+  guitar2.spawn();
+  guitar3.spawn();
+  guitar4.spawn();
+  guitar5.spawn();
+  guitar6.spawn();
+  guitar7.spawn();
 }
 
 void oscEvent(OscMessage theOscMessage) {
