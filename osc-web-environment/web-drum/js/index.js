@@ -2,7 +2,7 @@
 //
 //
 // append letters dynamically into array
-array = ['A', 'C', 'F', 'F', 'G', 'B'];
+array = ['A', 'B', 'C', 'D', 'E'];
 console.log(array);
 //
 // // osc socket connection
@@ -294,25 +294,25 @@ setInterval(function(){
 
 switch (array[0]) {
 		case 'A':
-			hiHat();
-			break;
-		case 'B':
-			snare();
-			break;
-		case 'C':
-			kick();
-			break;
-		case 'D':
 			floorTom();
 			break;
-		case 'E':
-			crash();
-			break;
-		case 'F':
+		case 'B':
 			leftTom();
 			break;
-		case 'G':
+		case 'C':
 			rightTom();
+			break;
+		case 'D':
+			snare();
+			break;
+		case 'E':
+			hihat();
+			break;
+		case 'F':
+			crash();
+			break;
+		case 'G':
+			kick();
 			break;
 	}
 array.shift();

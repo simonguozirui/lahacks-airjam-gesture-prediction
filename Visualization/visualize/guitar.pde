@@ -8,15 +8,10 @@ class guitar{
     h = rheight;
   }
   
-  void spawn(){
-    
-    fill(255,0,0);
+  void spawn(){ 
+    fill(39,116,174);
     stroke(0);
     rect(x,y,w,h);
-    fill(255,255,255);
-    stroke(0);
-    rect(x,y,w-10,h-10);
-    
   }
   
   void hit(){

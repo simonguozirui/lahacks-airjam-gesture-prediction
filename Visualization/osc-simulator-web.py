@@ -12,7 +12,7 @@ ipNum = "127.0.0.1"
 instrument = sys.argv[1]
 client = udp_client.SimpleUDPClient(ipNum, portNum)
 
-drumKeyList  = ["A","B","C","D"]
+drumKeyList  = ["A","B","C","D","E"]
 guitarKeyList = ["A","B","C","D","E","F"]
 
 def guitarNotesSimulator():
