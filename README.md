@@ -1,4 +1,4 @@
-Run with Python 3.6 in an pyenv environment.
+Run with Python 3.6 in an pyenv environment, activating by `source env/bin/activate`.
 
 You need to install those packages first
 ```
