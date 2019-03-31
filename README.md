@@ -10,3 +10,9 @@ For every terminal session, set up the credential environment by
 ```
 export GOOGLE_APPLICATION_CREDENTIALS=FILE_PATH
 ```
+
+
+For visualization
+```
+pip install python-osc
+```
