@@ -1,7 +1,9 @@
 // append letters (A,B..) dynamically into variable 'array'
 //
 //
-//
+// append letters dynamically into array
+array = ['A', 'C', 'F', 'F', 'G', 'B'];
+console.log(array);
 //
 // // osc socket connection
 var socket = io('http://127.0.0.1:8081');
@@ -27,7 +29,9 @@ socket.on('connect', function() {
 		 var status = document.getElementById("status");
 		 status.innerHTML = obj[0];
 		 console.log(obj[1]);
-		 
+		 array.push(obj[1]);
+		 console.log(array);
+
  });
 
 // crash varibles
@@ -270,8 +274,7 @@ keytl.to(key, 0.1, {scale: 1.1, transformOrigin: "50% 50%", ease: Expo.easeOut})
 
 // key triggers
 
-// append letters dynamically into array
-array = ['A', 'C', 'F', 'F', 'G', 'B']
+
 
 
 // key wobble
