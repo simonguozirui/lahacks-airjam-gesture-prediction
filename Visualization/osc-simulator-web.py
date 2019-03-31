@@ -12,21 +12,22 @@ ipNum = "127.0.0.1"
 instrument = sys.argv[1]
 client = udp_client.SimpleUDPClient(ipNum, portNum)
 
-list  = ["A","B","C","D"]
+drumKeyList  = ["A","B","C","D"]
+guitarKeyList = ["A","B","C","D","E","F"]
 
-# def guitarNotesSimulator():
-#     while True:
-#         client.send_message("/hit", randint(1, 16))
-#         time.sleep(1)
+def guitarNotesSimulator():
+    while True:
+        client.send_message("/hit", random.choice(guitarKeyList))
+        time.sleep(random.random())
 def drumNotesSimulator():
      while True:
-         client.send_message("/hit", random.choice(list))
+         client.send_message("/hit", random.choice(drumKeyList))
          time.sleep(random.random())
 #
-# if instrument == "guitar":
-#     client.send_message("/instrument", "guitar")
-#     guitarNotesSimulator()
-if instrument == "drum":
+if instrument == "guitar":
+    client.send_message("/instrument", "guitar")
+    guitarNotesSimulator()
+elif instrument == "drum":
     client.send_message("/instrument", "drum")
     drumNotesSimulator()
 else:

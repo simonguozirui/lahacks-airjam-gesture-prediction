@@ -8,6 +8,7 @@ drum drum1, drum2, drum3, drum4;
 guitar[] guitars = new guitar[15]; 
 
 int w = 20; 
+
 for(int i = 1; i < 16; i++){
   guitars[i-1] = new guitar(100+w*(i-1), 400, w,20);
 }
